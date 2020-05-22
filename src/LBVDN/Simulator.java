@@ -9,11 +9,12 @@ import java.util.List;
 import java.util.Map;
 
 public class Simulator {
-	static String scRatios = "500";
-	static String scFileName = "./Resource/"+scRatios+"/ServiceCenter.txt";
-	static String allVFileName = "./Resource/"+scRatios+"/nodes.txt";
-	static String edgesFileName = "./Resource/"+scRatios+"/edges.txt";
-	static String distanceFileName = "./Resource/"+scRatios+"/CostMatrix.txt";
+	static String datasetType = "Constant";
+	static String totalCapacityRatio = "400";
+	static String scFileName = "./Resource/"+totalCapacityRatio+"/ServiceCenter.txt";
+	static String allVFileName = "./Resource/"+totalCapacityRatio+"/nodes.txt";
+	static String edgesFileName = "./Resource/"+totalCapacityRatio+"/edges.txt";
+	static String distanceFileName = "./Resource/"+totalCapacityRatio+"/CostMatrix.txt";
 
 	static float objectiveFunctionCost = 0;
 	static float totalPenalty = 0;
@@ -166,8 +167,9 @@ public class Simulator {
 		System.out.println("Total Execution time in ns = " + (endTime - startTime));
 		
 		
-		BufferedWriter bw = new BufferedWriter(new FileWriter("./"+scRatios+"_results_DSI.txt"));
-		String line = "objectiveFunctionCost: "+objectiveFunctionCost+"\n";
+		BufferedWriter bw = new BufferedWriter(new FileWriter("./"+datasetType+"_"+totalCapacityRatio+"_results_DSI.txt"));
+		String line = "Bellman "+datasetType+" "+totalCapacityRatio+"\n";
+		line += "objectiveFunctionCost: "+objectiveFunctionCost+"\n";
 		line += "totalPenalty: "+totalPenalty+"\n";
 		line += "Total Execution time in ns = " + (endTime - startTime);
 		bw.write(line);
