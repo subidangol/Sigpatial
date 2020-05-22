@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 public class Simulator {
-	static String scRatios = "600";
+	static String scRatios = "500";
 	static String scFileName = "./Resource/"+scRatios+"/ServiceCenter.txt";
 	static String allVFileName = "./Resource/"+scRatios+"/nodes.txt";
 	static String edgesFileName = "./Resource/"+scRatios+"/edges.txt";
