@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 public class Simulator {
-	static String datasetType = "Constant";
+	static String datasetType = "DatasetII";
 	static String totalCapacityRatio = "300";
 	static String scFileName = "./Resource/"+totalCapacityRatio+"/ServiceCenter.txt";
 	static String allVFileName = "./Resource/"+totalCapacityRatio+"/nodes.txt";
