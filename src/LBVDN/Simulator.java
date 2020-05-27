@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 public class Simulator {
-	static String datasetType = "DatasetII";
+	static String datasetType = "Dataset3";
 	static String totalCapacityRatio = "300";
 	static String scFileName = "./Resource/"+totalCapacityRatio+"/ServiceCenter.txt";
 	static String allVFileName = "./Resource/"+totalCapacityRatio+"/nodes.txt";
@@ -167,7 +167,7 @@ public class Simulator {
 		System.out.println("Total Execution time in ns = " + (endTime - startTime));
 		
 		
-		BufferedWriter bw = new BufferedWriter(new FileWriter("./"+datasetType+"_"+totalCapacityRatio+"_results_DSI.txt"));
+		BufferedWriter bw = new BufferedWriter(new FileWriter("./"+datasetType+"_"+totalCapacityRatio+"_results.txt"));
 		String line = "Bellman "+datasetType+" "+totalCapacityRatio+"\n";
 		line += "objectiveFunctionCost: "+objectiveFunctionCost+"\n";
 		line += "totalPenalty: "+totalPenalty+"\n";
